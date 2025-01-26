@@ -16,22 +16,27 @@ import ClientsPage from './components/pages/ClientsPage';
 const App = () => {
   return (
     <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<AboutUsPage />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/company-details" element={<CompanyDetails />} />
-        <Route path="/team" element={<TeamPage />} />
-        <Route path="/history" element={<HistoryPage />} />
-        <Route path="/automation" element={<AutomationPage />} />
-        <Route path="/manual-testing" element={<ManualTestingPage />} />
-        <Route path="/clients" element={<ClientsPage />} />
-      </Routes>
-      <Footer />
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about-us" element={<AboutUsPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/company-details" element={<CompanyDetails />} />
+            <Route path="/team" element={<TeamPage />} />
+            <Route path="/history" element={<HistoryPage />} />
+            <Route path="/automation" element={<AutomationPage />} />
+            <Route path="/manual-testing" element={<ManualTestingPage />} />
+            <Route path="/clients" element={<ClientsPage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </Router>
   );
+  
 };
 
 export default App;

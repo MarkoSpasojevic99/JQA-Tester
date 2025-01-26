@@ -3,9 +3,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => (
-  <header className="bg-gray-800 text-white p-4">
+  <header className="bg-[#1E90FF] text-white p-4">
     <div className="container mx-auto flex justify-between items-center">
-      <h1 className="text-xl font-bold">QA Testing Experts</h1>
+      {/* Linkovano ime firme na Home stranicu */}
+      <h1 className="text-xl font-bold">
+        <Link to="/" className="hover:text-yellow-400">QA Testing Experts</Link>
+      </h1>
       <nav className="flex gap-6">
         <div className="relative group">
           <Link to="/about-us" className="hover:text-yellow-400">About Us</Link>
